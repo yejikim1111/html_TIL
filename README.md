@@ -31,3 +31,6 @@
 ---
 9. `git add .` **.**이란 작업수정한 모든 파일을 대기소(stage)에 올리겠다는 뜻, 즉 지금까지 작업한 모든 파일을 올림. `git add README.md` 라면 README 파일만 올라감 
 10. `git status` 현재 스테이지 확인 명령 
+11. `git commit -m "메세지기록"`
+12. `git remote add origin 깃허브저장소주소` 깃허브 저장소 업로드 위치가 어디인지 주소 연결
+13. `git push origin main` 11번에서 커밋한 파일을 12번 저장소에 최종 업로드하는 명령 
