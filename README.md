@@ -19,3 +19,15 @@
 ## git 설정과 gitHub 업로드까지 순서(터미널 입력 기준)
 1. `git config --list` : 현재 깃 설정 정보 확인
 2. 새로운 입력창이 안뜰땐 터미널에서 `Ctrl+C` 또는 `Q` (현재 입력 종료)
+3. 위 1번에서 깃 설정정보에 name, email이 내 정보가 아닐 때 
+4. `git config --global user.email "you@example.com"` 이메일 설정
+5. `git config --global user.name "Your Name"` 이름 설정(메일 아이디 동일하게)
+6. `git config --list` 위 4~5번 설정 올바르게 됐는지 확인 
+이메일 `git config --global user.email "ypd0061@gmail.com"` 
+이름 `git config --global user.name "yejikim1111"` 
+---
+7. `git init` 현재 폴더를 작업 디렉터리 폴더로 연결, 폴더경로 옆에 **master** 표시 생기면 성공 
+8. `git branch -M main` 깃 디렉터리명칭을 브랜치라 부름. 해당 브랜치명을 개인에 맞게 변경, 기본이 **main**
+---
+9. `git add .` **.**이란 작업수정한 모든 파일을 대기소(stage)에 올리겠다는 뜻, 즉 지금까지 작업한 모든 파일을 올림. `git add README.md` 라면 README 파일만 올라감 
+10. `git status` 현재 스테이지 확인 명령 
