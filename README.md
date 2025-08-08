@@ -23,8 +23,6 @@
 4. `git config --global user.email "you@example.com"` 이메일 설정
 5. `git config --global user.name "Your Name"` 이름 설정(메일 아이디 동일하게)
 6. `git config --list` 위 4~5번 설정 올바르게 됐는지 확인 
-이메일 `git config --global user.email "ypd0061@gmail.com"` 
-이름 `git config --global user.name "yejikim1111"` 
 ---
 7. `git init` 현재 폴더를 작업 디렉터리 폴더로 연결, 폴더경로 옆에 **master** 표시 생기면 성공 
 8. `git branch -M main` 깃 디렉터리명칭을 브랜치라 부름. 해당 브랜치명을 개인에 맞게 변경, 기본이 **main**
