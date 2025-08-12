@@ -88,3 +88,5 @@
 ## git 버전관리
 ### gitHub 복사방법
 * `git clone 주소붙여넣기`
+### gitHub 수정된 작업물 내려받기
+* `git pull origin main` 
