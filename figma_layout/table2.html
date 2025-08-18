@@ -59,6 +59,12 @@
         #pay tbody tr td:nth-child(3)~ :nth-child(4) {
             width: 170px;
         }
+        /* git 명령어 표 그룹선택자 */
+        #git thead tr th,
+        #git tbody tr th, 
+        #git tbody tr td {
+            border:1px solid #000;
+        }
     </style>
 </head>
 <body>
@@ -120,6 +126,38 @@
                         <td>기본제공</td>
                         <td>300MB+3Mbps</td>
                     </tr>
+        </tbody>
+    </table>
+    <hr>
+    <table id="git">
+        <thead>
+            <tr>
+                <th scope="col">프로그래밍 종류</th>
+                <th scope="col">명령어</th>
+                <th scope="col">해석</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr> <!-- 1 -->
+                <th rowspan="4" scope="row">Git</th>
+                <th scope="row">git init</th>
+                <td>깃 폴더 경로 설정</td>
+            </tr>
+            <tr> <!-- 2 -->
+                <!-- <th>Git</th> -->
+                <th scope="row">git remote add origin</th>
+                <td>깃허브 원격저장소 연결</td>
+            </tr>
+            <tr> <!-- 3 -->
+                <!-- <th>Git</th> -->
+                <th scope="row">git status</th>
+                <td>변경상태&스테이징 대기상태</td>
+            </tr>
+            <tr> <!-- 4 -->
+                <!-- <th>Git</th> -->
+                <th scope="row">git log</th>
+                <td>push 업로드한 기록(커밋포함) 확인</td>
+            </tr>
         </tbody>
     </table>
 </body>
