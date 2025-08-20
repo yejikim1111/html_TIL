@@ -1,0 +1,154 @@
+/* 마켓컬리 회원가입 양식 4개*/
+body {background-color: #f5f5f5;}
+#wrap {
+    border:3px solid red;
+    width:612px; margin:0 auto; /* margin:0 auto <- 화면 상하 붙고 좌우는 남은 여백 처리 */
+    padding: 41px 0 0;
+}
+#wrap h1 {
+    padding: 0 0 41px;
+    text-align: center;
+}
+#wrap h1 a {}
+#wrap h1 a img {}
+/* 약관 4개*/
+#wrap .law {
+    height: 200px;
+    background-color: #fff;
+    padding:10px; margin:0 0 54px;
+    overflow: auto;
+    font-size:0.75rem;
+} 
+#wrap .law h2 {margin-bottom:40px;} 
+#wrap .law h3 {margin-bottom:20px;} 
+#wrap .law p {line-height: 1.5;} 
+/* 가입양식(아이디~생년월일) 28*/
+#wrap #join_frm {}
+#wrap #join_frm .user_info { 
+background-color:coral;
+overflow: hidden;
+margin: 0 0 54px;
+}
+#wrap #join_frm .user_info dt {
+    background-color: beige;
+    width:120px;
+/*     display: inline-block; */
+float:left; clear:both;
+}
+#wrap #join_frm .user_info dt em {color:#f00; font-weight:600;}
+#wrap #join_frm .user_info dd {
+    background-color: aqua;
+    width:300px;
+    float:left; 
+/*     display:inline-block; */
+    /* 인라인-블록은 기본 margin을 2~3px 내장하고 있다. */
+    margin: 0 0 11px;
+}
+#wrap #join_frm .user_info dd:nth-last-child(2) {margin:0;}
+#wrap #join_frm .user_info dd:nth-child(3n) {
+    background-color: lime;
+    width:120px;
+    float: right; /* 중복확인~ 오른쪽으로 띄어진 이유 */
+}
+#wrap #join_frm .user_info dd .input_de {
+    background-color: #fff; border: 1px solid #aaa;
+    border-radius: 5px;
+    width: 100%; padding:10px;
+} /* margin이 들어가면 x, 형제가 없음 */
+#wrap #join_frm .user_info dd .input_de::placeholder {
+    font-size:0.875rem; color:#aaa;
+    padding: 10px 10px 0 10px;
+} /* 1~6 공통 class .input_de */
+/* 가입양식 ------------------------------------1. 아이디 */
+#wrap #join_frm .user_info dd input#user_id {}
+#wrap #join_frm .user_info dd button#id_overlap_btn {
+    background-color: #9E00B7; color:#fff;
+    width:120px; padding:10px 0; border-radius: 5px;
+    font-size:0.875rem;
+}
+/* 가입양식 ------------------------------------2. 비밀번호 */
+#wrap #join_frm .user_info dd input#user_pw {}
+/* 가입양식 ------------------------------------3. 비번확인 */
+#wrap #join_frm .user_info dd input#user_pw_chk {} 
+/* 가입양식 ------------------------------------4. 이름 */
+#wrap #join_frm .user_info dd input#user_name {}
+/* 가입양식 ------------------------------------5. 이메일 */
+#wrap #join_frm .user_info dd input#user_email {}
+#wrap #join_frm .user_info dd button#mail_overlap_btn {
+    background-color: #9E00B7; color:#fff;
+    width:120px; padding:10px 0; border-radius: 5px;
+    font-size:0.875rem;
+} 
+
+/* 가입양식 ------------------------------------6. 휴대폰 */
+#wrap #join_frm .user_info dd #agency {
+/*     background-image: url(../images/arrow_drop_down.png);
+    background-repeat:no-repeat;
+    background-position: 27px 10px; */
+    background:#fff url(../images/arrow_drop_down.png) no-repeat 27px 10px;
+    width:50px; padding:10px;
+    border: 1px solid #aaa;
+    border-radius:5px;
+    font-size:0.75rem;
+    float:left; height:41px;
+}
+#wrap #join_frm .user_info dd #agency option {}
+#wrap #join_frm .user_info dd #user_phone_num {width: 245px; float:right;}
+#wrap #join_frm .user_info dd #certified_btn {
+    background-color: #ccc; color:#fff;
+    width:120px; padding:10px 0; border-radius: 5px;
+    font-size:0.875rem;
+} 
+/* 가입양식 ------------------------------------7. 주소 */
+#wrap #join_frm .user_info dd .adr_search {
+background-color: #fff; border: 1px solid #9E00B7; 
+display: block; 
+padding: 10px 0; border-radius: 5px; margin: 0 0 10px;
+font-size: 0.875rem; text-align:center;
+}
+#wrap #join_frm .user_info dd p {
+color: #aaa; font-size: 0.875rem;
+}
+/* 가입양식 ------------------------------------8. 성별 */
+#wrap #join_frm .user_info dd:nth-child(23) {padding:10px 0; text-align:center;}
+#wrap #join_frm .user_info dd label {}
+#wrap #join_frm .user_info dd label:nth-child(2) {margin:0 30px;}
+#wrap #join_frm .user_info dd label .gender {display:none;} /* 공통 */
+#wrap #join_frm .user_info dd label .gender:checked+span {
+    background-image: url(../images/gender_checked.png);
+}
+#wrap #join_frm .user_info dd label #male {}
+#wrap #join_frm .user_info dd label #female {}
+#wrap #join_frm .user_info dd label #none {}
+#wrap #join_frm .user_info dd label span { /* 선택 x default */
+    background-image:url(../images/gender_unchecked.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left:17px; font-size:0.875rem;
+}
+/* 가입양식 ------------------------------------9. 생년월일 */
+#wrap #join_frm .user_info dd:nth-child(26) {   
+    background-color: #fff; border: 1px solid #9E00B7; 
+    border-radius: 5px; 
+    text-align:center;
+    padding:10px 0;
+}
+#wrap #join_frm .user_info dd .birthday {
+    text-align:center;
+    width:50px;
+} /* 공통 */
+#wrap #join_frm .user_info dd #user_y {}
+#wrap #join_frm .user_info dd #user_m {}
+#wrap #join_frm .user_info dd #user_d {}
+#wrap #join_frm .user_info dd > span {
+    color: #aaa; font-size: 0.875rem;
+    margin: 0 15px; 
+}
+/* 가입버튼 1*/
+#wrap #join_frm #join_btn {
+    background-color: #9E00B7; color:#fff;
+    display: block;
+    width:200px; height: 40px; margin:54px auto 0;
+    border-radius: 10px;
+    font-size:0.875rem; font-weight: 600;
+}
