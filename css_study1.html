@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 통합연습</title>
+    <link rel="stylesheet" href="/styles/reset.css">
+    <style>
+        body *::selection {background-color: rgba(229, 255, 201, 1);}
+        body {background: #e5ffc9;
+            background: linear-gradient(90deg, rgba(229, 255, 201, 1) 0%, rgba(255, 107, 107, 1) 52%, rgba(232, 136, 114, 1) 100%);}
+        #wrap {}
+        #wrap .list {background-color: aqua;}
+        #wrap .list li{
+            float:left;
+        }
+        #wrap .list:nth-child(2) {border: 2px solid red;}
+        #wrap .list:nth-of-type(2) {border: 2px soild blue;}
+        #wrap .list:nth-child(2) li:first-child {background-color: pink;}
+        #wrap .list:first-of-type li:first-child {border:  2px solid black;}
+        #wrap .list:first-of-type li:last-child {background-color: lime;}
+        #wrap .list:last-child li:last-child a {background-color: lime;}
+        #wrap .list li a {font-size: 2rem;}
+        #wrap .list li:nth-child(even) {border-bottom: 4px dotted red;}
+        #wrap .list li:nth-child(odd) {border-bottom: 4px dotted blue;}
+        #wrap .list:last-child li:nth-child(3n+1) {background-color: coral;}
+        section { clear: both;}
+        section #btn1, section .link1 {} /* 그룹  */
+        section > * {
+            font-size: 3rem;
+            padding:10px; margin:4px;
+            background-color: #ccc;
+        } /* 모든(*) 자식(>) 선택자 */
+        section #btn1:hover {background-color: #222;}
+        section .link1 {}
+        section .link1:hover {background-color: #f5f5f5;}
+        section input:focus {border:3px solid green;}
+        /* 가상 선택자 before, after */
+        article a {}
+        article a:nth-child(2) {background-color: yellowgreen;}
+        article a:nth-child(2)::before {
+            content: '';
+            display: inline-block;
+            width:1px; height: 6px;
+            background-color: red; margin:0 4px;
+        }
+        article a:nth-child(2)::after {
+            content: '';
+            display: inline-block;
+            width: 2px; height: 10px;
+            background-color: #222; margin:0 4px;
+        }
+        #wrap {}
+        #wrap h1 { clear: both;}
+        #wrap  {border: 2px solid red;}
+        .mobile {
+            width:430px; height:923px;
+            margin: 100px auto;
+            background: url(https://i.pinimg.com/1200x/d9/06/a7/d906a79d26ae62122c8e8de1b0f59fb8.jpg) center / cover;
+
+        }
+        .mobile::after{
+            content:''; display: block;
+            width: 100%; height: 100%; /* 부모모두채우기 */
+            /* background:rgba(255,0,0,0.2); */
+            background:linear-gradient(rgba(255,0,0,0.1),rgba(255,255,0.1));
+        }
+        #search_frm {}
+        #search_frm #user_name {}
+        #search_frm #user_size {}
+        #search_frm #user_color {}
+        #search_frm #search {}
+        /* 속성선택자 ^(시작) $(끝) *(포함)  */
+        #search_frm input[type=text] {background: yellow;}
+        #search_frm input[type^=te] {background: pink;}
+        #search_frm input[name^=user] {background: gray;}
+        #search_frm input[name$=xt] {background: green;}
+        #search_frm input[name*=_] {background: skyblue;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>CSS 공부</h1>
+        <ul class="list">
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+        </ul>
+        <h1>CSS 공부</h1>
+        <ul class="list">
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+        </ul>
+    </div>
+    <section>
+        <button type="button" id="btn1">확인</button>
+        <a href="#" class="link1">바로가기</a>
+        <input type="text" placeholder="아이디 입력">
+    </section>
+    <article>
+        <a href="#">아이디 찾기</a>
+        <a href="#">비밀번호 찾기</a>
+        <a href="#">회원가입</a>
+    </article>
+<!--     <div class="mobile"></div> -->
+    <!-- 쇼핑몰 검색 필터 -->
+
+    <form action="#" method="get" id="search_frm">
+        <input type="text" name="user_name" id="user_name" placeholder="상품명">
+        <input type="text" name="user_size" id="user_size" placeholder="사이즈">
+        <input type="text" name="user_color" id="user_color" placeholder="색상">
+        <button type="button" id="search">검색</button>
+    </form>
+</body>
+</html>
