@@ -1,0 +1,102 @@
+#wrap .sns {
+    text-align: center;
+    margin:14px 0 0;
+}
+#wrap .sns a {}
+#wrap .sns a:nth-child(2) {margin: 0 20px;}
+#wrap .sns a img {}
+#wrap #join_frm {}
+/* ------------------------- 가입정보 */
+#wrap #join_frm .contents {}
+#wrap #join_frm .contents .info {}
+#wrap #join_frm .contents .info dt {
+    margin: 22px 0 10px;
+    font-size: 1.063rem; font-weight: 500; 
+}
+#wrap #join_frm .contents .info dt:first-child {margin-top:0px;}
+#wrap #join_frm .contents .info dd {clear:both; overflow:hidden; font-size: 0.875rem; } 
+#wrap #join_frm .contents .info dt+dd {margin: 0 0 10px; color: #777;}
+
+#wrap #join_frm .contents .info dd input[id^=user] { /* 공통 - 비밀번호, 비밀번호확인 등등 */
+    height:36px; padding-left:10px; width:100%; 
+    background: #fff;
+    border: 1px solid #bbb; border-radius: 3px;
+    font-size: 0.875rem; color: #777;
+} 
+#wrap #join_frm .contents .info dd #user_mail { /* input. 이메일칸만*/  width : 190px; float:left;}
+#wrap #join_frm .contents .info dd span {
+    float:left; color: #777;
+    margin-left: 3.5px;
+    transform: translateY(9px);
+}
+#wrap #join_frm .contents .info dd select[name*=adr]  {
+    float:right;
+    height:36px; padding-left:10px; width : 190px; 
+    background: #fff url(../images/arrow_drop_down.png) no-repeat 90% center; 
+    border: 1px solid #bbb; border-radius: 3px;
+    font-size: 0.875rem; color: #777;
+}
+#wrap #join_frm .contents .info dd select[name*=adr] option {}
+#wrap #join_frm .contents .info dd #email_certified_btn {
+    padding: 10px 0; width: 100%;
+    border: 1px solid #ddd; border-radius: 3px; background-color: #F5F5F5;
+    color: #777; font-weight: 600; 
+}
+#wrap #join_frm .contents .info dd #user_pw {}
+#wrap #join_frm .contents .info dd #user_pw_re {}
+#wrap #join_frm .contents .info dd #user_nick {}
+/* ------------------------- 가입약관 */
+#wrap #join_frm .law {
+    border:5px solid blue;
+    margin:22px 0 0;
+}
+#wrap #join_frm .law dl {}
+#wrap #join_frm .law dl dt {
+    font-size: 1.063rem; font-weight: 500; 
+    margin: 0 0 10px;
+}
+#wrap #join_frm .law dl dd {
+    margin: 10px; padding: 10px;
+    font-size: 0.875rem; 
+    border:1px solid #aaa; border-radius: 3px;
+}
+#wrap #join_frm .law dl dd ul li {
+    padding: 10px 0 0;
+}
+
+/* --------------------------------전체 동의 1행 */
+
+#wrap #join_frm .law dl dd ul li:first-child {
+    border-bottom: 1px solid #ddd;
+}
+#wrap #join_frm .law dl dd ul li:first-child #all {}
+#wrap #join_frm .law dl dd ul li:first-child label {
+    font-weight: 600;
+    font-size: 1rem;
+}
+#wrap #join_frm .law dl dd ul li:first-child label em {
+    font-size: 0.875rem; color: #777;
+}
+/* ---------------------------------개별동의 2~6행 통합 */
+#wrap #join_frm .law dl dd ul li input[name*=agree] {display: none;}
+#wrap #join_frm .law dl dd ul li input[name*=agree]:checked+label {background-image: url(../images/check_box_y.png);}
+/* ^상태 선택자 = 해당 선택일때 바뀌는 것만 쓰면 됨 */
+#wrap #join_frm .law dl dd ul li label {
+    background-image: url(../images/check_box_n.png);
+    background-repeat:no-repeat;
+    padding-left:34px; line-height: 24px; display: inline-block;
+}
+#wrap #join_frm .law dl dd ul li label em {}
+#wrap #join_frm .law dl dd ul li label .essential {font-size: 0.813rem; color: #3292FF;}
+#wrap #join_frm .law dl dd ul li label .choice {font-size:0.75rem; color: #777;}
+#wrap #join_frm .law dl dd ul li label .more {float:right;}
+#wrap #join_frm .law dl dd ul li label .more img {}
+/* 이벤트 */
+#wrap #join_frm .law dl dd ul li:last-child {
+    border-top: 1px solid #aaa;
+}
+
+/* ------------------------- 가입버튼 */
+#wrap #join_btn {margin: 22px 0;} 
+#wrap > p {text-align: center; font-size: 0.875rem;}
+#wrap > p a {text-decoration: underline; font-weight: 600;} 

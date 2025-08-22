@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인 | 오늘의 집</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/login.css">
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/login.css">
 </head>
 <body>
     <div id="wrap">
@@ -27,13 +28,12 @@
                 <dt>아이디</dt>
                 <dd><input type="text" name="user_id" id="user_id" class="id_pw" placeholder="아이디"></dd>
                 <dt>비밀번호</dt>
-                <dd><input type="password" name="user_pw" id="user_pw" class="id_pw" part="비밀번호"></dd>
+                <dd><input type="password" name="user_pw" id="user_pw" class="id_pw" placeholder="비밀번호"></dd>
             </dl>
         </form>
-        </div>
         <!-- 로그인버튼&회원가입링크 -->
-        <p><button type="submit" id="login_btn">로그인</button></p>
-        <p>아이디가 없으신가요?</p><a href="./join.html">회원가입</a>
+        <button type="submit" id="login_btn">로그인</button>
+        <p>아이디가 없으신가요?<a href="./join.html">회원가입</a></p>
     </div>
 </body>
 </html>
