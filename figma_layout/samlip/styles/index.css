@@ -1,0 +1,44 @@
+/* header 공통 디자인 common.css */
+#wrap main .visual_bnr_wrap {}
+#wrap main .visual_bnr_wrap section {
+    background-size:cover;
+    height: 819px;
+} /* 공통선택자 */
+#wrap main .visual_bnr_wrap section h2 {
+    font-size:var(--text-title70);
+    font-weight:var(--weight-bold);
+    line-height:var(--line-title);
+    letter-spacing:var(--letter-minus2);
+}
+#wrap main.visual_bnr_Warp section p {
+    font-size:var(--text-contents21);
+    line-height:var(--line-contents);
+    letter-spacing:var(--letter-minus2);
+    color:var(--color-gray4);
+} 
+#wrap main .visual_bnr_wrap .bnr1 {
+    background-image: url(../images/row1_bnr1.jpg);
+}
+#wrap main .visual_bnr_wrap .bnr1 h2 {
+    color:var(--color-white);
+}
+#wrap main .visual_bnr_wrap .bnr1 p {color:var(--color-white);}
+#wrap main .visual_bnr_wrap .bnr2 {}
+#wrap main .visual_bnr_wrap .bnr2 h2 {
+    color:var(--color-title-indigo);
+    background-image: url(../images/row1_bnr2.jpg);
+}
+#wrap main .visual_bnr_wrap .bnr2 p {}
+#wrap main .visual_bnr_wrap .bnr3 {}
+#wrap main .visual_bnr_wrap .bnr3 h2 {
+    color:var(--color-title-brown);
+    background-image: url(../images/row1_bnr3.jpg);
+}
+#wrap main .visual_bnr_wrap .bnr3 p {}
+#wrap main .visual_bnr_wrap .bnr4 {}
+#wrap main .visual_bnr_wrap .bnr4 h2 {
+    color:var(--color-title-coral);
+    background-image: url(../images/row1_bnr4.jpg);
+}
+
+#wrap main .visual_bnr_wrap .bnr4 p {}

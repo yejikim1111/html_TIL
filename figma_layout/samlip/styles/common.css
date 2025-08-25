@@ -1,0 +1,82 @@
+/* CSS 변수 */
+:root {
+    /* 대상-용도:반복속성값; */
+    --text-title70:4.375rem;
+    --text-contents21:1.313rem;
+    --text-memu18:1.125rem;
+    --text-sub12:0.75rem;
+/* 행간 */
+--line-title:0.9;
+--line-contents: 1.5;
+/* 자간 */
+--letter-minus2:-0.02rem;
+/* 굵기 */
+--weight-bold:700;
+/* 색상 */
+--color-white: #fff;
+--color-gray4: #444;
+--color-graya: #aaa;
+--color-title-brown: #642c10;
+--color-title-indigo: #1d356d;
+--color-title-coral: #d43936;
+/* 레아이웃 정보 */
+--width-desktop:1440px;
+--margin-desktop_l_r-80:80px;
+}
+/* header포함 공통 */
+#wrap {}
+#wrap header {
+    background: aqua;
+    /* 블록의 기본값이라 생략 가능 weight:100% */
+    padding:0 80px;
+    height:92px;
+    display: flex;
+    flex-flow: row nowrap; /* 메인축(수평) 줄바꿈 안함 */
+    justify-content:space-between; /* 메인축 정렬(양쪽끝) */
+    align-items:center; /* 교차축(수직) 가운데 */
+
+}
+#wrap header h1 {}
+#wrap header h1 a {}
+#wrap header h1 a img {}
+#wrap header nav {
+    margin: 0 auto;
+    background:lime;
+}
+#wrap header nav .gnb {
+    display:flex; /* 자식 li 정렬 위한 값 */
+    flex-flow:row nowrap;
+    gap:70px;
+
+}
+#wrap header nav .gnb > li {}
+#wrap header nav .gnb > li > a {
+    font-size:var(--text-menu18);
+    background: yellow;
+    line-height:92px;
+    display:block;
+
+}
+#wrap header .right_menu {
+    background: yellow;
+    display: flex; flex-flow: row nowrap;
+    align-items: center;
+}
+
+#wrap header .right_menu > li {
+    
+}
+#wrap header .right_menu > li:first-child {
+    display: flex; /* customer와 구분선의 부모 */
+    flex-flow: row nowrap;
+}
+#wrap header .right_menu > li:first-child::after {
+    content:''; display:block;
+    width:1px; height:13px; background:var(--color-graya);
+    margin: 0 40px;
+}
+#wrap header .right_menu > li > a {
+    font-size: var(--text-sub12);
+}
+#wrap header .right_menu > li > a img {}
+#wrap #main {}
