@@ -7,11 +7,12 @@
     --text-sub12:0.75rem;
 /* 행간 */
 --line-title:0.9;
---line-contents: 1.5;
+--line-contents:1.5;
 /* 자간 */
 --letter-minus2:-0.02rem;
 /* 굵기 */
 --weight-bold:700;
+--weight-semibold:600;
 /* 색상 */
 --color-white: #fff;
 --color-gray4: #444;
@@ -26,7 +27,6 @@
 /* header포함 공통 */
 #wrap {}
 #wrap header {
-    background: aqua;
     /* 블록의 기본값이라 생략 가능 weight:100% */
     padding:0 80px;
     height:92px;
@@ -34,6 +34,7 @@
     flex-flow: row nowrap; /* 메인축(수평) 줄바꿈 안함 */
     justify-content:space-between; /* 메인축 정렬(양쪽끝) */
     align-items:center; /* 교차축(수직) 가운데 */
+    position:relative; /* lnb 부모 크기+ 위치 기준  */
 
 }
 #wrap header h1 {}
@@ -41,7 +42,6 @@
 #wrap header h1 a img {}
 #wrap header nav {
     margin: 0 auto;
-    background:lime;
 }
 #wrap header nav .gnb {
     display:flex; /* 자식 li 정렬 위한 값 */
@@ -52,20 +52,53 @@
 #wrap header nav .gnb > li {}
 #wrap header nav .gnb > li > a {
     font-size:var(--text-menu18);
-    background: yellow;
     line-height:92px;
     display:block;
 
 }
+/* 메인메뉴에 마우스 올렸을 때 서브메뉴 보이기 공용 */
+#wrap header nav .gnb > li:hover .lnb {display:flex;}
+/* 서브메뉴 시작 */
+#wrap header nav .gnb > li .lnb {
+    background: rgba(255, 255, 255, 0.7);
+    /* 교차시키기(absolute) + 중첩순서(z-index)  */
+    position: absolute;
+    z-index: 90;
+    width: 100%; /* absolute와 함께 w100%가 있으면 부모의 너비와 같다. */
+    left: 0px; /* absolute + 좌표가 있다면 부모(pst) 기준 좌표 설정 뜻  */
+    top: 92px; 
+    display: flex;
+    flex-flow:row nowrap; justify-content: center; gap: 80px; padding: 45px 0;
+    display: none; /*  초기숨기기 */
+}
+#wrap header nav .gnb > li .lnb > li {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items:center;
+    gap:15px;
+}
+#wrap header nav .gnb > li .lnb li a{
+    font-size: var(--text-memu18); font-weight: var(--weight-semibold);
+}
+
+#wrap header nav .gnb > li .lnb li .lnb_depth2 {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items:center;
+    gap:15px;
+}
+#wrap header nav .gnb > li .lnb li .lnb_depth2 >li {}
+#wrap header nav .gnb > li .lnb li .lnb_depth2 >li > a {
+
+}
+
+
+
 #wrap header .right_menu {
-    background: yellow;
     display: flex; flex-flow: row nowrap;
     align-items: center;
 }
-
-#wrap header .right_menu > li {
-    
-}
+#wrap header .right_menu > li {}
 #wrap header .right_menu > li:first-child {
     display: flex; /* customer와 구분선의 부모 */
     flex-flow: row nowrap;
@@ -75,8 +108,31 @@
     width:1px; height:13px; background:var(--color-graya);
     margin: 0 40px;
 }
+#wrap header .right_menu > li:last-child {margin-left: 40px;}
 #wrap header .right_menu > li > a {
     font-size: var(--text-sub12);
 }
 #wrap header .right_menu > li > a img {}
+    /* 언어선택 시 활성화 디자인 */
+#wrap header .right_menu li:nth-child(2) { position:relative;} 
+/* 두번째 li에 마우스 올렸을 때 언어선택 보이기 */
+#wrap header .right_menu li:nth-child(2):hover .lang_select{display:flex;} 
+#wrap header .right_menu li:nth-child(2) .lang_select{ 
+    /* 형제 또는 부모와 겹치는 디자인 요소는 -> absolute 필수 */
+    position: absolute; z-index:100; /* 0~999 */
+    display:flex; flex-flow:column nowrap; gap:10px;
+    /* 초기 숨기기 */
+    display: none;
+    
+}
+#wrap header .right_menu li:nth-child(2) .lang_select a {
+    width: 40px; line-height: 40px;
+    background:#fff;
+    border: 1px solid #aaa; border-radius: 50%;
+    font-size: var(--text-sub12); text-align: center;
+}
+#wrap header .right_menu li:nth-child(2) .lang_select a.kr { }
+#wrap header .right_menu li:nth-child(2) .lang_select a.en {}
+#wrap header .right_menu li:nth-child(2) .lang_select a.cn { }
+
 #wrap #main {}
