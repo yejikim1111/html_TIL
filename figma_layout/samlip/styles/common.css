@@ -1,10 +1,14 @@
-/* CSS 변수 */
+/* header 공통 디자인 common.css*/
+ /* CSS 변수 */
 :root {
     /* 대상-용도:반복속성값; */
     --text-title70:4.375rem;
     --text-contents21:1.313rem;
     --text-memu18:1.125rem;
     --text-sub12:0.75rem;
+    --text-sub10:0.675rem;
+    --text-title40:2.5rem;
+    --text-sub14:0.875rem;
 /* 행간 */
 --line-title:0.9;
 --line-contents:1.5;
@@ -17,25 +21,31 @@
 --color-white: #fff;
 --color-gray4: #444;
 --color-graya: #aaa;
+--color-grayd: #ddd;
 --color-title-brown: #642c10;
 --color-title-indigo: #1d356d;
 --color-title-coral: #d43936;
+--color-point: #36b4e5;
 /* 레아이웃 정보 */
 --width-desktop:1440px;
 --margin-desktop_l_r-80:80px;
 }
+body,html {scroll-behavior:smooth;}
 /* header포함 공통 */
-#wrap {}
+#wrap {padding-top:92px;}
 #wrap header {
     /* 블록의 기본값이라 생략 가능 weight:100% */
     padding:0 80px;
     height:92px;
-    display: flex;
+    display: flex; 
     flex-flow: row nowrap; /* 메인축(수평) 줄바꿈 안함 */
     justify-content:space-between; /* 메인축 정렬(양쪽끝) */
     align-items:center; /* 교차축(수직) 가운데 */
-    position:relative; /* lnb 부모 크기+ 위치 기준  */
-
+    position:fixed; /* lnb 부모 크기+ 위치 기준  position이라는 속성이 들어가면 모두 부모가 될 수 있음 (relative, fix모두 가능*/
+    z-index: 900; left: 0; top: 0;
+    width: 100%;
+    /* position fixed or absolute이 들어가면 너비 다시 세팅해야함 - inline으로 되어서 ..? */
+    background:var(--color-white);
 }
 #wrap header h1 {}
 #wrap header h1 a {}
