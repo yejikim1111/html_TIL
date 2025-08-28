@@ -167,7 +167,7 @@ display:inline-block;
 #wrap main .news_notice_wrap .card_wrap .card_all li .date {
     position: absolute; left: 20px; bottom: 9px;
 }
-#wrap main .news_notice_wrap .card_wrap .view_all_btn {
+#wrap main .news_notice_wrap .view_all_btn {
     width: 200px; height:48px; margin:  20px 0 0;
     border: 1px solid var(--color-grayd);
     /* text-align:center; line-height: 48px; */

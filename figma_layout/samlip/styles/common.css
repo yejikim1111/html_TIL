@@ -144,5 +144,64 @@ body,html {scroll-behavior:smooth;}
 #wrap header .right_menu li:nth-child(2) .lang_select a.kr { }
 #wrap header .right_menu li:nth-child(2) .lang_select a.en {}
 #wrap header .right_menu li:nth-child(2) .lang_select a.cn { }
+/* --------------------------------------------------------------------메인 */
+#wrap main {}
+/* --------------------------------------------------------------------푸터 */
+#wrap footer {padding: 0 80px}
+#wrap footer *:nth-child(odd) {}
+#wrap footer *:nth-child(even) {}
+#wrap footer .ft_top {
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between; align-items: center;
+}
+#wrap footer .ft_top .menu {
+    display: flex; flex-flow: row nowrap;
+    align-items: center; gap: 20px;
+}
+#wrap footer .ft_top .menu a {}
+#wrap footer .ft_top .menu a:first-child {color:var(--color-point);}
+#wrap footer .ft_top .menu a:nth-child(2) {color:var(--color-title-coral);}
+#wrap footer .ft_top .menu a img {
 
-#wrap #main {}
+}
+#wrap footer .ft_top .site_all {
+    display: flex; flex-flow: row nowrap;
+    align-items: center; gap: 20px;
+} 
+
+#wrap footer .ft_top .site_all li {position:relative;}
+#wrap footer .ft_top .site_all li p {
+    background-image: url(../images/arrow_down.png);
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    line-height: 40px; padding-left: 10px;
+    border: 1px solid var(--color-grayd);
+    background-color: var(--color-white);
+}
+#wrap footer .ft_top .site_all li:nth-child(1) p { width: 220px;}
+#wrap footer .ft_top .site_all li:nth-child(2) p {width: 140px; border:1px solid red;}
+#wrap footer .ft_top .site_all li .family_list {
+    background: var(--color-white);
+    position: absolute;
+    width: 100%; /* absolute의 부모relative의 너비만큼 차지하라 */
+    bottom:40px;
+    height:250px; overflow: auto;
+    border:1px solid var(--color-gray4);
+    display:none;
+}
+#wrap footer .ft_top .site_all li:nth-child(1):hover .family_list {display:block;}
+#wrap footer .ft_top .site_all li .family_list li {padding:10px;}
+#wrap footer .ft_top .site_all li .family_list li a {
+
+}
+#wrap footer .ft_top .site_all li .sitemap_wrap {display:none;}
+#wrap footer .ft_top .site_all li .sitemap_wrap .sitemap_centents {}
+#wrap footer .ft_top .site_all li .sitemap_wrap .sitemap_centents p {
+    background: violet;
+    width: 100%; /* absolute의 부모relative의 너비만큼 차지하라 */
+    height:250px;
+}
+
+#wrap footer .ft_btm {}
+#wrap footer .ft_btm .address {padding: 25px 0; line-height: var(--line-contents);}
+#wrap footer .ft_btm p{}
