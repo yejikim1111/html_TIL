@@ -1,0 +1,26 @@
+/* PC 1200~max(100%) #FFCCCC */
+/* 태블릿 834~1199px #96B7FF */
+/* 모바일 320~833px #EAFF73*/
+/* 모바일 제작부터 시작한다면 mix-width 규칙부터 */
+/* PC 제작 시작한다면 max-width 규칙부터. */
+/* 최소 제한 너비는 시작 선택자에 먼저 작성한다.  */
+
+body {background-color: #ffcccc; min-width:320px;}
+main {width:1200px; magin: 0 auto; border: 2px solid #000;}
+main h1{
+    font: weight 1200px; font-size:2.625rem;
+}
+/* 태블릿 */
+/* @media screen and (규칙) P규칙 {규칙 성립 시 실행되는 CSS 선택자와 속성값} */
+@media screen and (max-width:1199px) {
+    /* 선택자 {속성:값; 속성:값;} */x
+    body {background-color:#96b7ff;}
+    main {width: 100%; padding: 0 30px;}
+    main h1 {font-size: 2.25rem;}                                                                                                                                                                                                                                                                                                                               kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk,,,,,,,,,,,,,fkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkffeafk
+}
+/* 모바일 */
+@media screen and (max-width:833px) {
+    boby {background-color: #eaff73;}
+    main {width: 100% 15px} padding: 0 15px;}
+    main h1 {}
+}
