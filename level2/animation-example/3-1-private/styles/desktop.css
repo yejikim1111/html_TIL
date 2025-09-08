@@ -11,6 +11,7 @@ header .right a {
     position:relative; padding:5px 5px 5px 27px;
     border:1px dashed rgba(255,255,255,0.6); 
     font-size:0.875rem; border-radius:3px;
+    color: #fff;
 }
 header .right a::before {
     content:''; display:block;
@@ -22,6 +23,8 @@ header .right a:first-child::before {background-position:0 0;}
 header .right a:last-child::before {background-position:-20px 0;}
 .mobile_nav_icon {display:none;}
 /* main */
+
+
 main {
     position: relative;
     width: 1400px;
@@ -29,25 +32,38 @@ main {
     top: 80px;
     text-align: center;
 }
+main::before, main::after {
+    background:linear-gradient(90deg, rgb(9,13,43), transparent);
+    content:''; display:block; width:30%; height:100%;
+    position:absolute; top:0; z-index:500; 
+}
+main::before {left:0;}
+main::after {right:0; transform:scaleX(-1);} 
+main > section, main > div {position:relative; z-index:400;}
 main > * {max-width:1400px; margin:0 auto;}
 /* 중첩순서 처리 배경(10) 그라디언트(20) 나머지(30) */
 main .bg_wrap {position:absolute; z-index:10;}
 main .txt, main .car_list, main .car, main .scroll {
     width:1400px; margin:0 auto; position:relative; z-index:30;
 }
+main .txt {z-index:900;}
+main .scroll {animation: updown 2s linear alternate infinite;}
 /* 메인배경 */
 main .bg_wrap .bg {width:1400px; margin:0 auto;}
 main .bg_wrap .bg1 {
     height:100px; 
     background:url(../images/bg_cloud.png) repeat-x;
+    animation: go 100s linear infinite;
 }
 main .bg_wrap .bg2 {
     height:200px; 
     background:url(../images/bg_city1.png) repeat-x;
+    animation: go 30s linear infinite;
 }
 main .bg_wrap .bg3 {
     height:100px; position:relative; top:-96px;
     background:url(../images/bg_city2.png) repeat-x;
+    animation: go 10s linear infinite;
 }
 /* 메인제목 */
 main .txt {}
@@ -60,4 +76,18 @@ main .car #left_tire, main .car #right_tire {
 }
 main .car #left_tire {left:102px;}
 main .car #right_tire {right:91px;}
+main .car img[id$=tire] {animation:wheel 2s linear infinite;}
 
+
+@keyframes wheel {
+    0%{transform: rotate(0);}
+    100%{transform: rotate(360deg);}
+}
+@keyframes go {
+    0%{background-position-x:0;}
+    100%{background-position-x:1000px;}
+}
+@keyframes updown {
+    0%{transform: translateY(0);}
+    100%{transform: translateY(25px);}
+}

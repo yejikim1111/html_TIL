@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+    /* 애니메이션 제작 순서  
+    1. 목표 정하기
+    2. @keyframes 장면생성 
+    3. 특정 요소 animation 불러오기*/
+    .bg {height:100vh; background:darkblue;}
+    .bg p {animation:ball_move1 2s ease infinite both;}
+    .bg p img{animation: rotate 0.5 linear infinite;}
+    .bg p img{animation: totave cubic-bezier(0.215, 0.610, 0.355, 1)}
+    @keyframes ball_move1{
+        0% {transform:translate(0,0);}
+        30% {transform:translate(500px,0);}
+        60% {transform:translate(250px,500px);}
+        100% {transform:translate(0,0);}
+    }
+    @keyframes ball_move1{
+        0% {transform:translate(0,0);}
+        30% {transform:translate(500px,0);}
+        60% {transform:translate(250px,500px);}
+        100% {transform:translate(0,0);}
+    }
+
+    @keyframes rotate {
+        from{transform:rotate(0);}
+        to{transform:rotate(360deg);}
+    }
+    @keyframes ratems2 {
+        0% {}
+        30%{}
+        60%{}
+    }
+</style>
+    
+
+    </style>
+</head>
+<body>
+    <div class="bg">
+        <p><img src="https://cdn-icons-png.flaticon.com/512/11658/11658964.png" alt=""> </p>
+    </div>    
+    <div class="bg2">
+        <p><img src="https://cdn-icons-png.flaticon.com/512/11353/11353822.png " alt="" > </p>
+    </div>                                                                                                                                                                                                   
+</body>
+</html>
