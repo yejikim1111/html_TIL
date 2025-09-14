@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musecore | Login</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+<body>
+    <div id="wrap">
+        <h1>Log in to Musescre</h1>
+        <span>Don't have an account?</span>
+        <a href="#"> Sign Up</a>
+        <section class="login_sns">
+            <a href="#"><img class="google_logo" alt="">Continue with Google</a>
+            <a href="#"><img class="facebook_logo" alt="Continue with facebook"></a>
+            <a href="#"><img class="apple_logo" alt="Continue with apple"></a>
+        </section>
+        <p class="line_or">or</p>
+        <form action="#" method="post" id="login">
+            <dl class="info">
+                <dt>Email or username</dt>
+                <dd>
+                    <input type="text" name="user_id" id="user_id" class="loginbox">
+                </dd>
+                <dt>Password</dt> 
+                <dt> <a href="#"> Forgot your password? </a></dt>
+                <dd>
+                    <input type="password" name="user_pw" id="user_pw" class="loginbox">
+                </dd>
+            </dl>
+            <button type="submit" id="login_btn">Log in</button>
+        </form>
+    </div>
+</body>
+</html>
