@@ -10,35 +10,67 @@
     --weight-semi: 600;
 }
 
+body { background-color: #eee;}
 #wrap {
-    width: 320px;
-    margin : 0 auto;
-    padding : 0 18px;
-    letter-spacing: -2px;
+    background-color: var(--white-color);
+    width: 320px; 
+    margin : 10px auto;
+    padding : 24px 24px;
+    letter-spacing: -0.02em;
 }
 #wrap h1 {
     text-align: center; font-size: var(--font-title); font-weight: var(--weight-semi);
 }
+#wrap .accountText{ 
+    font-size:0.938rem; text-align: center;
+    margin: 8px 0 24px; 
+}
 #wrap span {
-    font-size:0.938rem; color: var(--sub-color); text-align: center;
+     color: var(--sub-color); 
 }
 #wrap a {
     color: var(--main-color);
 }
-#wrap .login_sns {}
+#wrap .login_sns { text-align: center; display:flex; flex-flow: row nowrap; align-items: center;
+}
+#wrap .login_sns a:nth-child(1) img {background-color: var(--white-color); border-radius: 20px; 
+    display:block;
+    width: 24px; height: 24px; margin: 0 5px 0 5px;
+}
 #wrap .login_sns a:nth-child(1) { background-color: var(--main-color);
     color: var(--white-color); border-radius: 15px; width:168px; height: 30px;
-
+    display:flex; align-items: center; justify-content: center;
+    font-size: var(--font-content-12);
 }
-#wrap .login_sns a {}
-#wrap .login_sns a img {}
-#wrap p.line_or {}
+
+
+#wrap .login_sns a { border: 1px solid var(--sub-color); border-radius: 15px; margin: 0 10px 0 0;}
+#wrap .login_sns a img {width: 24px; height: 24px; margin: 0 8px 0 8px;}
+#wrap .line_or {display:flex; align-items: center; gap:14px; 
+margin: 10px; color: var(--sub-color);}
+#wrap .line_or span {flex:1; height:1px; background-color: var(--sub-color);}
+
+
 #wrap #login {}
 #wrap #login .info {}
 #wrap #login dt {}
 #wrap #login dd {}
-#wrap #login dd .loginbox {}
+#wrap #login dd .loginbox {
+    border: 1px solid var(--sub-color);
+    margin:10px 0 10px 0;
+    width: 100%; height: 48px;
+}
 #wrap #login dd #user_id {}
-#wrap #login dt a {}
+#wrap #login dt a {font-size: var(--font-content-12);}
+#wrap #login .info .pw_text {
+    display: flex; justify-content: space-between; 
+    align-items: baseline; line-height: 1.2;
+}
 #wrap #login dd #user_pw {}
-#wrap #login #login_btn{}
+#wrap #login #login_btn{
+    margin-top : 22px; width:100%; height:33px;
+    border-radius: 50px; 
+    background-color: var(--sub-color);
+    font-size: var(--font-content-14);
+    color: var(--white-color);
+}

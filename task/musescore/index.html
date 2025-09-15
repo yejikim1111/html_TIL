@@ -3,30 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Musecore | Login</title>
+    <title>Musescore | Login</title>
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
     <div id="wrap">
-        <h1>Log in to Musescre</h1>
-        <span>Don't have an account?</span>
-        <a href="#"> Sign Up</a>
+        <h1>Log in to Musescore</h1>
+        <div class="accountText">
+            <span>Don't have an account?</span>
+            <a href="#"> Sign Up</a>
+        </div>
         <section class="login_sns">
-            <a href="#"><img class="google_logo" alt="">Continue with Google</a>
-            <a href="#"><img class="facebook_logo" alt="Continue with facebook"></a>
-            <a href="#"><img class="apple_logo" alt="Continue with apple"></a>
+            <a href="#"><img class="google_logo" src="images/google-login.png" alt="">Continue with Google</a>
+            <a href="#"><img class="facebook_logo" src="images/fb-login.svg" alt="Continue with facebook"></a>
+            <a href="#"><img class="apple_logo" src="images/apple-login.svg" alt="Continue with apple"></a>
         </section>
-        <p class="line_or">or</p>
+        <div class="line_or">
+            <span></span>
+            <p>or</p>
+            <span></span>
+        </div>
         <form action="#" method="post" id="login">
             <dl class="info">
                 <dt>Email or username</dt>
                 <dd>
                     <input type="text" name="user_id" id="user_id" class="loginbox">
                 </dd>
-                <dt>Password</dt> 
-                <dt> <a href="#"> Forgot your password? </a></dt>
+                <dt class="pw_text">
+                <span>Password</span> <a href="#"> Forgot your password? </a>
+                </dt>
                 <dd>
                     <input type="password" name="user_pw" id="user_pw" class="loginbox">
                 </dd>
